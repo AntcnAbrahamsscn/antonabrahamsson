@@ -1,0 +1,403 @@
+/* Variables */
+:root {
+    --primary: #f97068;
+    --secondary: #212738;
+}
+
+/* Reset */
+body,
+p,
+a,
+ul,
+li {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    list-style-type: block;
+}
+
+body li {
+    list-style-type: none;
+}
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--secondary);
+    overflow-x: hidden;
+    font-family: "Open sans";
+}
+
+.button {
+    background: none;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+}
+
+.button:hover {
+    color: var(--secondary);
+    background: var(--primary);
+}
+
+input,
+textarea {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid #9893d8;
+    color: #f2f2f2;
+}
+/* Fonts */
+@font-face {
+    font-family: "Open sans";
+    src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #dddbff;
+    font-weight: normal;
+}
+
+p,
+a,
+li {
+    color: #58658b;
+}
+
+h1,
+h3 {
+    font-size: 1.2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+h4 {
+    font-size: 1.1em;
+}
+
+.leading {
+    font-size: 1.1em;
+}
+/* Mobile styles */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+}
+.site-nav {
+    margin: 0 20px;
+}
+
+.site-nav ul {
+    display: none;
+}
+
+.site-nav h1 {
+    grid-column: 1/5;
+    grid-row: 1;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary);
+}
+
+#welcome {
+    padding: 0 0 20px 20px;
+}
+
+.welcome-text {
+    grid-column: 1/5;
+}
+
+.welcome-img {
+    grid-column: 5/9;
+    overflow-x: hidden;
+}
+
+.welcome-img > img {
+    width: 150%;
+    /* border: 5px solid var(--primary); */
+    /* background-color: #dddbff; */
+}
+
+.welcome-text a {
+    margin: 20px 0;
+}
+
+#welcome button {
+    margin: 0 auto;
+}
+
+#portfolio {
+    background-color: #1a1e2a;
+    padding: 30px 20px;
+}
+
+#portfolio h3 {
+    margin-bottom: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projects a {
+    grid-column: 1/9;
+    margin: 20px 0;
+    display: flex;
+}
+
+.projects a * {
+    margin: 0 20px;
+    max-width: 40%;
+    align-self: center;
+}
+
+.projects img {
+    padding: 10px;
+    /* border: 3px solid var(--primary); */
+    border-radius: 50%;
+}
+
+.projects h4 {
+    color: #58658b;
+}
+
+#skills {
+    padding: 30px 20px;
+}
+
+#skills h3 {
+    text-align: center;
+}
+
+#skills ul {
+    margin: 40px 0;
+}
+#skills li {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    grid-column: span 4;
+    text-align: center;
+    list-style-type: none;
+}
+
+#skills img {
+    height: 80px;
+    margin: 10px auto;
+    filter: invert(1);
+}
+
+#contact {
+    padding: 30px 20px;
+    background-color: #1a1e2a;
+
+    /* margin: 0 10px; */
+}
+
+#contact h3,
+#contact p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#contact p.leading {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* #contact p {
+    width: 80%;
+    margin: auto;
+} */
+
+#contact form {
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#contact input,
+#contact textarea {
+    width: 80%;
+    margin: 10px 0;
+}
+
+#contact .button {
+    margin-top: 10px;
+}
+
+footer {
+    padding: 30px 20px;
+    background-color: #212738;
+    /* background-image: url(assets/white-linetext.png); */
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+footer .copyright {
+    grid-column: 1/3;
+    font-size: 0.8em;
+}
+
+footer .social {
+    grid-column: 7/9;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer li {
+    margin: 0 6px;
+}
+
+footer img {
+    width: 20px;
+    filter: invert(1);
+}
+/* Small tablets styles */
+
+@media screen and (min-width: 620px) {
+    .welcome-text {
+        grid-column: 1/5;
+    }
+    .welcome-img {
+        grid-column: 5/9;
+    }
+
+    .welcome-img img {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .projects {
+        margin-top: 40px;
+    }
+
+    .projects a {
+        grid-column: span 4;
+        display: block;
+        margin: 20px 0;
+    }
+
+    /* .projects a:last-child {
+    grid-column: 3/7;
+} */
+    .projects a * {
+        margin: 10px;
+        max-width: 60%;
+        margin: 10px 20%;
+    }
+
+    .projects h4 {
+        text-align: center;
+    }
+    #skills {
+        padding: 30px 100px;
+    }
+    .welcome-text {
+        align-self: center;
+    }
+}
+
+/* Large tablets and laptop styles */
+
+@media screen and (min-width: 960px) {
+    body {
+        font-size: 18px;
+    }
+    .grid {
+        width: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .leading {
+        margin: 20px 0;
+    }
+
+    .site-nav {
+        padding: 0 20px;
+    }
+    .site-nav h1 {
+        grid-column: 1/3;
+    }
+    .site-nav ul {
+        display: flex;
+        grid-column: 6/9;
+        justify-content: flex-end;
+        align-self: center;
+    }
+    .site-nav li {
+        margin-left: 30px;
+        list-style-type: none;
+    }
+
+    .site-nav a:hover {
+        color: #dddbff;
+    }
+
+    #welcome {
+        padding-bottom: 0;
+    }
+
+    #welcome img {
+        padding-bottom: 80px;
+    }
+    #skills {
+        padding: 30px 20px;
+    }
+    #skills ul {
+        margin: 40px auto;
+    }
+
+    #skills li {
+        grid-column: span 2;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+    .projects a {
+        grid-column: span 2;
+    }
+    .projects a * {
+        max-width: 90%;
+        margin: 30px 0;
+    }
+}
+
+/* Desktop styles */
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+    #welcome,
+    #portfolio,
+    #skills,
+    #contact {
+        padding: 90px 0;
+    }
+
+    footer {
+        padding: 80px 0;
+    }
+
+    footer img {
+        width: 30px;
+    }
+}
