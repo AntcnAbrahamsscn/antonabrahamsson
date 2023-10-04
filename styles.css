@@ -378,6 +378,11 @@ footer img {
         max-width: 90%;
         margin: 30px 0;
     }
+    
+    .projects a h4 {
+        max-width: 90%;
+        margin: 30px 0;
+    }
 }
 
 /* Desktop styles */
@@ -390,11 +395,11 @@ footer img {
     #portfolio,
     #skills,
     #contact {
-        padding: 90px 0;
+        padding: 60px 0;
     }
 
     footer {
-        padding: 80px 0;
+        padding: 50px 0;
     }
 
     footer img {
