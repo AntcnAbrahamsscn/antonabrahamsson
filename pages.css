@@ -90,6 +90,59 @@ margin: 0 auto;}
     border-bottom: 3px solid var(--primary);
 }
 
+.bar {
+    background-color:  #dddbff;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    grid-column: 8/9;
+    margin-top: 25px;
+    position: relative;
+}
+
+.menu-items li {
+    padding: 10px 8px;
+    margin: 0;
+    white-space: nowrap;    
+}
+    
+    .menu-items li a {
+        text-decoration: none;
+        color:  #dddbff;
+        display: block;    
+    }
+    
+    .menu-items li a:hover {
+        color: #58658b;
+        
+    }
+    
+    .hamburger-menu:hover .menu-items {
+        display: block;
+    }
+    .hamburger-menu:hover .bar{
+        display: none;
+    }
+
+.menu-items {
+    list-style-type: none;
+    display: none;
+    background-color: var(--secondary);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: absolute;
+    border-radius: 10px;
+    right: 0;
+}
+
 .projects a, .projects h2{
     grid-column: 1/9;
     text-align: center;
